@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="引言：javascript中有个很重要的概念，就是变量的作用域，js的变量无非两种-全局变量和局部变量，局部变量在函数内定义，函数外面是访问不到的，但是有时候我们要访问函数内部的变量，怎么办呢？ 我们稍微变通一下，于是就有了闭包的概念；  闭包概念：由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包理解成“定义在一个函数内部的函数”。简单理解就是在一个函数内定义">
+<meta name="description" content="1. 首先安装msysgit，然后安装开放源代码的Git客户端TortoiseGitmsysgit：http://msysgit.github.io/TortoiseGit : http://code.google.com/p/tortoisegit/  2. 创建github账号，新建仓库（Create a New Repository） 3. 配置（重点）安装完成后在桌面右键会多出几个git的">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js闭包解析">
-<meta property="og:url" content="http://yoursite.com/2017/04/23/hello-world/index.html">
+<meta property="og:title" content="git上传代码到github">
+<meta property="og:url" content="http://yoursite.com/2017/04/06/git上传代码到github/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="引言：javascript中有个很重要的概念，就是变量的作用域，js的变量无非两种-全局变量和局部变量，局部变量在函数内定义，函数外面是访问不到的，但是有时候我们要访问函数内部的变量，怎么办呢？ 我们稍微变通一下，于是就有了闭包的概念；  闭包概念：由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包理解成“定义在一个函数内部的函数”。简单理解就是在一个函数内定义">
-<meta property="og:updated_time" content="2017-04-17T02:30:47.954Z">
+<meta property="og:description" content="1. 首先安装msysgit，然后安装开放源代码的Git客户端TortoiseGitmsysgit：http://msysgit.github.io/TortoiseGit : http://code.google.com/p/tortoisegit/  2. 创建github账号，新建仓库（Create a New Repository） 3. 配置（重点）安装完成后在桌面右键会多出几个git的">
+<meta property="og:updated_time" content="2017-04-17T02:30:47.953Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js闭包解析">
-<meta name="twitter:description" content="引言：javascript中有个很重要的概念，就是变量的作用域，js的变量无非两种-全局变量和局部变量，局部变量在函数内定义，函数外面是访问不到的，但是有时候我们要访问函数内部的变量，怎么办呢？ 我们稍微变通一下，于是就有了闭包的概念；  闭包概念：由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包理解成“定义在一个函数内部的函数”。简单理解就是在一个函数内定义">
+<meta name="twitter:title" content="git上传代码到github">
+<meta name="twitter:description" content="1. 首先安装msysgit，然后安装开放源代码的Git客户端TortoiseGitmsysgit：http://msysgit.github.io/TortoiseGit : http://code.google.com/p/tortoisegit/  2. 创建github账号，新建仓库（Create a New Repository） 3. 配置（重点）安装完成后在桌面右键会多出几个git的">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/23/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/06/git上传代码到github/"/>
 
 
 
 
 
-  <title> js闭包解析 | Hexo </title>
+  <title> git上传代码到github | Hexo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -270,7 +270,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/06/git上传代码到github/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -291,7 +291,7 @@
             
             
               
-                js闭包解析
+                git上传代码到github
               
             
           </h1>
@@ -306,8 +306,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-23T00:17:46+08:00">
-                2017-04-23
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-06T14:51:42+08:00">
+                2017-04-06
               </time>
             
 
@@ -324,7 +324,7 @@
 
           
           
-             <span id="/2017/04/23/hello-world/" class="leancloud_visitors" data-flag-title="js闭包解析">
+             <span id="/2017/04/06/git上传代码到github/" class="leancloud_visitors" data-flag-title="git上传代码到github">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -353,25 +353,22 @@
       
 
       
-        <h2 id="引言："><a href="#引言：" class="headerlink" title="引言："></a>引言：</h2><p>javascript中有个很重要的概念，就是变量的作用域，js的变量无非两种-全局变量和局部变量，局部变量在函数内定义，函数外面是访问不到的，但是有时候我们要访问函数内部的变量，怎么办呢？ 我们稍微变通一下，于是就有了闭包的概念；</p>
+        <h2 id="1-首先安装msysgit，然后安装开放源代码的Git客户端TortoiseGit"><a href="#1-首先安装msysgit，然后安装开放源代码的Git客户端TortoiseGit" class="headerlink" title="1. 首先安装msysgit，然后安装开放源代码的Git客户端TortoiseGit"></a>1. 首先安装msysgit，然后安装开放源代码的Git客户端TortoiseGit</h2><p>msysgit：<a href="http://msysgit.github.io/" target="_blank" rel="external">http://msysgit.github.io/</a><br>TortoiseGit : <a href="http://code.google.com/p/tortoisegit/" target="_blank" rel="external">http://code.google.com/p/tortoisegit/</a></p>
 <hr>
-<h2 id="闭包概念："><a href="#闭包概念：" class="headerlink" title="闭包概念："></a>闭包概念：</h2><p>由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包理解成“定义在一个函数内部的函数”。简单理解就是在一个函数内定义了一个函数fn，然后在函数外去调用它，就产生了闭包；</p>
-<hr>
-<h2 id="闭包的作用："><a href="#闭包的作用：" class="headerlink" title="闭包的作用："></a>闭包的作用：</h2><h2 id="在函数外面能访问函数内定义的局部变量；另一个就是让这些变量的值始终保持在内存中。"><a href="#在函数外面能访问函数内定义的局部变量；另一个就是让这些变量的值始终保持在内存中。" class="headerlink" title=" 在函数外面能访问函数内定义的局部变量；另一个就是让这些变量的值始终保持在内存中。 "></a> 在函数外面能访问函数内定义的局部变量；另一个就是让这些变量的值始终保持在内存中。 </h2><p> 这种情况下，我们是不能访问到局部变量的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function f1()&#123;</div><div class="line">　　var n=999;</div><div class="line">&#125;</div><div class="line"></div><div class="line">alert(n); // error</div></pre></td></tr></table></figure>
-<p> 如果我们要访问n就要使用闭包：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">function f1()&#123;</div><div class="line">	var n=999;</div><div class="line">	function f2()&#123;</div><div class="line">		alert(n);</div><div class="line">	&#125;</div><div class="line">	return f2;</div><div class="line">&#125;</div><div class="line">var f3=f1();</div><div class="line">f3();//999</div></pre></td></tr></table></figure>
-<p> 此时n的值是被保存在内存中，就是因为这点，闭包也是有缺点的，如果频繁使用闭包，就容易占用内存，解决的方法是退出函数之前，将不使用的局部变量全部删除。</p>
-<hr>
-<p> 如果函数内外定义了同一个变量会有冲突吗？</p>
-<h3 id="看一个面试常用的题目："><a href="#看一个面试常用的题目：" class="headerlink" title="看一个面试常用的题目："></a>看一个面试常用的题目：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var a=1;</div><div class="line">function f1()&#123;</div><div class="line"> var a =2;</div><div class="line"> alert(a);  </div><div class="line">&#125;		</div><div class="line">f1();</div><div class="line">alert(a);//结果是2，1</div></pre></td></tr></table></figure>
-<p> 这是因为a使用了var关键字，维护a的作用域在函数内部，而不受外部定义的影响</p>
-<p> 再来看：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function f1()</div><div class="line">&#123;</div><div class="line">  a =2;</div><div class="line"> alert(a);  </div><div class="line">&#125;	</div><div class="line">var a=1;	</div><div class="line">f1();</div><div class="line">alert(a);//结果是2,2</div></pre></td></tr></table></figure>
-<p> 真是奇怪，两次都是2，在这里f1的a没有使用var，所以是全局变量，在外面定义了a=1后执行函数f1，a又被赋值为2，所以两次都alert 2；</p>
-<hr>
-<p>这里只对闭包概念做简单描述，和举几个简单的例子帮助理解闭包，其实闭包在实际项目中的运用要复杂得多，如果有更好的见解，欢迎讨论！</p>
-<p>还有一个比较难一点的例子<a href="https://www.nowcoder.com/practice/578026cd24e3446bbf27fe565473dc26?tpId=6&amp;tqId=10972&amp;tPage=2&amp;rp=2&amp;ru=/ta/js-assessment&amp;qru=/ta/js-assessment/question-ranking可以去看看，直接在上面编程" target="_blank" rel="external">https://www.nowcoder.com/practice/578026cd24e3446bbf27fe565473dc26?tpId=6&amp;tqId=10972&amp;tPage=2&amp;rp=2&amp;ru=/ta/js-assessment&amp;qru=/ta/js-assessment/question-ranking可以去看看，直接在上面编程</a> 求助那里有答案o</p>
+<h2 id="2-创建github账号，新建仓库（Create-a-New-Repository）"><a href="#2-创建github账号，新建仓库（Create-a-New-Repository）" class="headerlink" title="2. 创建github账号，新建仓库（Create a New Repository）"></a>2. 创建github账号，新建仓库（Create a New Repository）</h2><hr>
+<h2 id="3-配置（重点）"><a href="#3-配置（重点）" class="headerlink" title="3. 配置（重点）"></a>3. 配置（重点）</h2><p>安装完成后在桌面右键会多出几个git的选项，在我们要创建git项目的文件里，里右键选择Git Init Here，会多出来一个.git文件夹，这就表示本地git创建成功，这个文件夹就是本地仓库。右键Git Bash进入git命令行</p>
+<h3 id="（1）-创建ssh-key；"><a href="#（1）-创建ssh-key；" class="headerlink" title="（1） 创建ssh key；"></a>（1） 创建ssh key；</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C &quot;你的邮箱地址&quot;</div><div class="line">提示确认路径和输入密码，我们连按三个回车就行了（不要密码）</div></pre></td></tr></table></figure>
+<h3 id="（2）-复制ssh-key"><a href="#（2）-复制ssh-key" class="headerlink" title="（2） 复制ssh key"></a>（2） 复制ssh key</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">找到C:\Users\Administrator\.ssh/下的id_rsa.pub文件，复制里面的内容</div></pre></td></tr></table></figure>
+<h3 id="（3）-创建github的key"><a href="#（3）-创建github的key" class="headerlink" title="（3） 创建github的key"></a>（3） 创建github的key</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">回到github，进入Account Settings，左边选择SSH Keys，Add SSH Key,title随便填，key粘贴刚才复制的内容，确认</div></pre></td></tr></table></figure>
+<h3 id="（4）-验证"><a href="#（4）-验证" class="headerlink" title="（4） 验证"></a>（4） 验证</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ ssh -T git@github.com </div><div class="line"> 如果是第一次的会提示是否continue，输入yes就会看到：You’ve successfully authenticated, but GitHub does not provide shell access 。这就表示已成功连上github</div></pre></td></tr></table></figure>
+<p>如果提示错误，可能是没在本地仓库打开bash，也可以用管理员权限打开git bash，在菜单里输入git bash，右键管理员身份打开再键入上面指令。</p>
+<h3 id="（5）-创建身份标识"><a href="#（5）-创建身份标识" class="headerlink" title="（5） 创建身份标识"></a>（5） 创建身份标识</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git config --global user.name &quot;你的用户名&quot;</div><div class="line"></div><div class="line">$ git config --global user.email &quot;你的邮箱&quot;</div></pre></td></tr></table></figure>
+<h3 id="（6）-添加远程地址"><a href="#（6）-添加远程地址" class="headerlink" title="（6） 添加远程地址"></a>（6） 添加远程地址</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git remote add origin git@github.com:用户名/项目名称（就是create new Repository的名称）.git</div></pre></td></tr></table></figure>
+<h3 id="（7）-提交和上传"><a href="#（7）-提交和上传" class="headerlink" title="（7） 提交和上传"></a>（7） 提交和上传</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">在本地仓库里添加一些文件，比如sample.txt</div><div class="line"></div><div class="line">$ git add sample.txt</div><div class="line"></div><div class="line">$ git commit -m &quot;first commit&quot; </div><div class="line">（first commit是你上传的说明，不能不填）</div><div class="line"></div><div class="line">$ git push origin master </div><div class="line">   （git push命令会将本地仓库推送到远程服务器， git pull命令则是拉取）</div></pre></td></tr></table></figure>
+<p>现在去github的仓库已经可以看到sample.txt文件了，</p>
+<h3 id="附上猴子都能懂得git入门，不过连接的仓库不是github"><a href="#附上猴子都能懂得git入门，不过连接的仓库不是github" class="headerlink" title="附上猴子都能懂得git入门，不过连接的仓库不是github"></a>附上猴子都能懂得git入门，不过连接的仓库不是github</h3><p><a href="http://backlogtool.com/git-guide/cn/intro/intro5_2.html" target="_blank" rel="external">http://backlogtool.com/git-guide/cn/intro/intro5_2.html</a></p>
+<h2 id="常见错误解决"><a href="#常见错误解决" class="headerlink" title="常见错误解决"></a>常见错误解决</h2><h3 id="1-设置远程地址："><a href="#1-设置远程地址：" class="headerlink" title="1. 设置远程地址："></a>1. 设置远程地址：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">输入：$ git remote add origin git@github.com:github帐号名/项目名.git </div><div class="line">提示出错信息：fatal: remote origin already exists.</div><div class="line">解决方法：输入$ git remote rm origin</div><div class="line">再输入：$ git remote add origin git@github.com:github帐号名/项目名.git</div></pre></td></tr></table></figure>
+<h3 id="2-提交到远程仓库"><a href="#2-提交到远程仓库" class="headerlink" title="2. 提交到远程仓库"></a>2. 提交到远程仓库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">如果输入$ git push origin master</div><div class="line">提示出错信息：error:failed to push som refs to .......</div><div class="line">先输入$ git pull origin master //先把远程服务器github上面的文件拉下来</div><div class="line">再输入$ git push origin master</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -408,14 +405,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/04/12/vue实现todolist的demo/" rel="next" title="vue实现todolist的demo">
+                <i class="fa fa-chevron-left"></i> vue实现todolist的demo
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/17/js继承的四种方式/" rel="prev" title="javascript的四种继承方式">
-                javascript的四种继承方式 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/02/Web下mvc模式的理解/" rel="prev" title="Web下mvc模式的理解">
+                Web下mvc模式的理解 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -547,7 +548,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言："><span class="nav-number">1.</span> <span class="nav-text">引言：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#闭包概念："><span class="nav-number">2.</span> <span class="nav-text">闭包概念：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#闭包的作用："><span class="nav-number">3.</span> <span class="nav-text">闭包的作用：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在函数外面能访问函数内定义的局部变量；另一个就是让这些变量的值始终保持在内存中。"><span class="nav-number">4.</span> <span class="nav-text"> 在函数外面能访问函数内定义的局部变量；另一个就是让这些变量的值始终保持在内存中。 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#看一个面试常用的题目："><span class="nav-number">4.1.</span> <span class="nav-text">看一个面试常用的题目：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-首先安装msysgit，然后安装开放源代码的Git客户端TortoiseGit"><span class="nav-number">1.</span> <span class="nav-text">1. 首先安装msysgit，然后安装开放源代码的Git客户端TortoiseGit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-创建github账号，新建仓库（Create-a-New-Repository）"><span class="nav-number">2.</span> <span class="nav-text">2. 创建github账号，新建仓库（Create a New Repository）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-配置（重点）"><span class="nav-number">3.</span> <span class="nav-text">3. 配置（重点）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#（1）-创建ssh-key；"><span class="nav-number">3.1.</span> <span class="nav-text">（1） 创建ssh key；</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（2）-复制ssh-key"><span class="nav-number">3.2.</span> <span class="nav-text">（2） 复制ssh key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（3）-创建github的key"><span class="nav-number">3.3.</span> <span class="nav-text">（3） 创建github的key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（4）-验证"><span class="nav-number">3.4.</span> <span class="nav-text">（4） 验证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（5）-创建身份标识"><span class="nav-number">3.5.</span> <span class="nav-text">（5） 创建身份标识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（6）-添加远程地址"><span class="nav-number">3.6.</span> <span class="nav-text">（6） 添加远程地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（7）-提交和上传"><span class="nav-number">3.7.</span> <span class="nav-text">（7） 提交和上传</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附上猴子都能懂得git入门，不过连接的仓库不是github"><span class="nav-number">3.8.</span> <span class="nav-text">附上猴子都能懂得git入门，不过连接的仓库不是github</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见错误解决"><span class="nav-number">4.</span> <span class="nav-text">常见错误解决</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-设置远程地址："><span class="nav-number">4.1.</span> <span class="nav-text">1. 设置远程地址：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-提交到远程仓库"><span class="nav-number">4.2.</span> <span class="nav-text">2. 提交到远程仓库</span></a></li></ol></li></ol></div>
             
 
           </div>

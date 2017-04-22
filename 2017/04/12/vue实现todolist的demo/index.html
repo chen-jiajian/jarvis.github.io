@@ -1,0 +1,854 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="前言：刚学习vue的小伙伴不知道从哪入手，很多网上的教程一来就搭建脚手架环境，可以新手更本看不懂，建议还是用引入script的方式引入vue.js，然后看官网的教程，再拿那这个demo练练手，也可以看看官网的demo，然后再 去熟悉安装，搭建单页面应用。效果： 功能： 在input输入文字点击按钮或者enter，下面会添加一个带复选框和文字还有删除按钮的li  用到的vue函数：data，meth">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue实现todolist的demo">
+<meta property="og:url" content="http://yoursite.com/2017/04/12/vue实现todolist的demo/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="前言：刚学习vue的小伙伴不知道从哪入手，很多网上的教程一来就搭建脚手架环境，可以新手更本看不懂，建议还是用引入script的方式引入vue.js，然后看官网的教程，再拿那这个demo练练手，也可以看看官网的demo，然后再 去熟悉安装，搭建单页面应用。效果： 功能： 在input输入文字点击按钮或者enter，下面会添加一个带复选框和文字还有删除按钮的li  用到的vue函数：data，meth">
+<meta property="og:image" content="http://img.blog.csdn.net/20170410225428731?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luYXRfMzQ0OTg2MjQ=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2017-04-17T02:30:47.955Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue实现todolist的demo">
+<meta name="twitter:description" content="前言：刚学习vue的小伙伴不知道从哪入手，很多网上的教程一来就搭建脚手架环境，可以新手更本看不懂，建议还是用引入script的方式引入vue.js，然后看官网的教程，再拿那这个demo练练手，也可以看看官网的demo，然后再 去熟悉安装，搭建单页面应用。效果： 功能： 在input输入文字点击按钮或者enter，下面会添加一个带复选框和文字还有删除按钮的li  用到的vue函数：data，meth">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20170410225428731?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luYXRfMzQ0OTg2MjQ=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/04/12/vue实现todolist的demo/"/>
+
+
+
+
+
+  <title> vue实现todolist的demo | Hexo </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Kategorien
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            Über
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/12/vue实现todolist的demo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                vue实现todolist的demo
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-12T14:51:42+08:00">
+                2017-04-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/04/12/vue实现todolist的demo/" class="leancloud_visitors" data-flag-title="vue实现todolist的demo">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><h2 id="刚学习vue的小伙伴不知道从哪入手，很多网上的教程一来就搭建脚手架环境，可以新手更本看不懂，建议还是用引入script的方式引入vue-js，然后看官网的教程，再拿那这个demo练练手，也可以看看官网的demo，然后再-去熟悉安装，搭建单页面应用。"><a href="#刚学习vue的小伙伴不知道从哪入手，很多网上的教程一来就搭建脚手架环境，可以新手更本看不懂，建议还是用引入script的方式引入vue-js，然后看官网的教程，再拿那这个demo练练手，也可以看看官网的demo，然后再-去熟悉安装，搭建单页面应用。" class="headerlink" title="刚学习vue的小伙伴不知道从哪入手，很多网上的教程一来就搭建脚手架环境，可以新手更本看不懂，建议还是用引入script的方式引入vue.js，然后看官网的教程，再拿那这个demo练练手，也可以看看官网的demo，然后再 去熟悉安装，搭建单页面应用。"></a>刚学习vue的小伙伴不知道从哪入手，很多网上的教程一来就搭建脚手架环境，可以新手更本看不懂，建议还是用引入script的方式引入vue.js，然后看官网的教程，再拿那这个demo练练手，也可以看看官网的demo，然后再 去熟悉安装，搭建单页面应用。</h2><h2 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h2><p><img src="http://img.blog.csdn.net/20170410225428731?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luYXRfMzQ0OTg2MjQ=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<h2 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h2><p> 在input输入文字点击按钮或者enter，下面会添加一个带复选框和文字还有删除按钮的li</p>
+<hr>
+<h2 id="用到的vue函数："><a href="#用到的vue函数：" class="headerlink" title="用到的vue函数："></a>用到的vue函数：</h2><p>data，methods，watch，还有localstorage</p>
+<hr>
+<h3 id="1-页面："><a href="#1-页面：" class="headerlink" title="1.页面："></a>1.页面：</h3><p> 先写外面的盒子，这里用到v-model双向绑定input的值和js里的inputValue<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;vue-todolist&quot; class=&quot;todolistDiv&quot;&gt;</div><div class="line">	&lt;span&gt; todolist&lt;/span&gt;</div><div class="line">	&lt;input class=&quot;ipt&quot; type=&quot;text&quot; v-model=&quot;inputVaule&quot; /&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p> 然后在js绑定：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var vm=new Vue(&#123;</div><div class="line">  el: &apos;#vue-todolist&apos;,</div><div class="line">  data: &#123;  </div><div class="line">  	inputVaule:&quot;&quot;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="2-添加ul和button："><a href="#2-添加ul和button：" class="headerlink" title="2.添加ul和button："></a>2.添加ul和button：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;vue-todolist&quot; class=&quot;todolistDiv&quot;&gt;</div><div class="line">	&lt;span&gt; todolist&lt;/span&gt;</div><div class="line">		&lt;input class=&quot;ipt&quot; type=&quot;text&quot; v-model=&quot;inputVaule&quot; v-on:keyup.enter=&quot;add&quot;/&gt;</div><div class="line">		&lt;button v-on:click=&quot;add&quot; class=&quot;btn&quot;&gt;add&lt;/button&gt;</div><div class="line">		&lt;ul &gt;</div><div class="line">			&lt;li v-for=&quot;item in items&quot; &gt;</div><div class="line">			&lt;div class=&quot;liDiv&quot;&gt;				</div><div class="line">				&lt;label&gt;&#123;&#123;item.text&#125;&#125;&lt;/label&gt;			</div><div class="line">			&lt;/div&gt;</div><div class="line">			&lt;/li&gt;</div><div class="line">		&lt;/ul&gt;</div><div class="line">	&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p> button的点击事件为methods里的add方法v-for就是遍历items数组，将item的text显示<br> js里的data要加上items,还要有methods:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var vm=new Vue(&#123;</div><div class="line">  el: &apos;#vue-todolist&apos;,</div><div class="line">  data: &#123;  </div><div class="line">    items:[&#123;text:&apos;1&apos;&#125;,&#123;text:&apos;2&apos;&#125;]</div><div class="line">  	inputVaule:&quot;&quot;</div><div class="line">  &#125;,</div><div class="line">  methods:&#123;</div><div class="line">	  add:function()&#123;</div><div class="line">	  	this.items.push(&#123;text:this.inputVaule&#125;);</div><div class="line">  		this.inputVaule=&quot;&quot;;</div><div class="line">  	&#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>点击按钮时，就添加input的值到items数组，并重置值。这样view就自动更新li添加一项，因为数据变化页面也会实时更新，vue的好处开始浮现</p>
+<hr>
+<h3 id="3-在li加上checkbox和delete"><a href="#3-在li加上checkbox和delete" class="headerlink" title="3. 在li加上checkbox和delete"></a>3. 在li加上checkbox和delete</h3><p>再给items添加completed这个属性，代表完成没有，使用v-bind：class，意思是item.completed是true，那么就会使用complete这个class，如果false，就没有class，complete这个class我们可以设置字体red，便于识别。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;li v-for=&quot;item in items&quot; &gt;</div><div class="line">			&lt;div class=&quot;liDiv&quot;&gt;</div><div class="line">				&lt;input type=&quot;checkbox&quot; v-model=&quot;item.completed&quot;&gt;</div><div class="line">				&lt;label  v-bind:class=&quot;&#123; complete:item.completed &#125;&quot;&gt;&#123;&#123;item.text&#125;&#125;&lt;/label&gt;</div><div class="line">				&lt;button v-on:click=&quot;removeTodo(item)&quot; class=&quot;btn&quot;&gt;x&lt;/button&gt;</div><div class="line">			&lt;/div&gt;</div><div class="line">&lt;/li&gt;</div></pre></td></tr></table></figure>
+<hr>
+<p> js这里添加了completed属性，还添加了removeTodo方法用于删除指定item：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">var vm=new Vue(&#123;</div><div class="line">  el: &apos;#vue-todolist&apos;,</div><div class="line">  data: &#123;  </div><div class="line">    items:[&#123;text:&apos;1&apos;,completed:true&#125;,&#123;text:&apos;2&apos;,completed:false&#125;]</div><div class="line">  	inputVaule:&quot;&quot;</div><div class="line">  &#125;,</div><div class="line">  methods:&#123;</div><div class="line">	  add:function()&#123;</div><div class="line">	  	this.items.push(&#123;text:this.inputVaule&#125;);</div><div class="line">  		this.inputVaule=&quot;&quot;;</div><div class="line">  	&#125;,</div><div class="line">  	removeTodo: function (todo) &#123;</div><div class="line">      this.items.splice(this.items.indexOf(todo), 1)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h2 id="localstorage："><a href="#localstorage：" class="headerlink" title="localstorage："></a>localstorage：</h2><p> 现在已经完善的差不多了，可是我们发现，每次浏览器刷新，或者页面重新打开，我们新增加的li就会消失，那我们要保存我们添加的数据，要怎么做呢，很简单，html5为我们提供了localstorage这个东西，它保存数据在浏览器，使得页面刷新或者重新打开或者浏览器关闭也不会数据丢失。</p>
+<p>我们一步步来看怎么实现</p>
+<h3 id="添加li时保存数据到localstorage"><a href="#添加li时保存数据到localstorage" class="headerlink" title="添加li时保存数据到localstorage:"></a>添加li时保存数据到localstorage:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var STORAGE_KEY = &apos;todos-vuejs&apos;//名称</div><div class="line">var todoStorage = &#123;  </div><div class="line">  save: function (todos) &#123;</div><div class="line">    localStorage.setItem(STORAGE_KEY, JSON.stringify(todos))</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>很简单，调用setItem传入key和我们的items数组即可，这时候我们要用到watch函数了，去监视items数组，如果items数组有变化即添加或者删除，我们都自动调用todostorage的save方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">watch:&#123;</div><div class="line">  	items:&#123;</div><div class="line">  		handler:function(items)&#123;</div><div class="line">  			todoStorage.save(items)</div><div class="line">  		&#125;,</div><div class="line">  		deep:true//一定要加</div><div class="line">  	&#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<h3 id="浏览器调试："><a href="#浏览器调试：" class="headerlink" title="浏览器调试："></a>浏览器调试：</h3><p>我们打开浏览器的开发者选项的dom，然后添加几个li，可以看到localstorage里面已经保存了todos-vuejs，里面保存了我们添加的item数据</p>
+<hr>
+<p> 数据保存到浏览器的localstorage后，我们的items数组的数组源是不是也应该设置为localstorage的呢</p>
+<h3 id="添加fetch方法"><a href="#添加fetch方法" class="headerlink" title="添加fetch方法"></a>添加fetch方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">var STORAGE_KEY = &apos;todos-vuejs&apos;//名称</div><div class="line">var todoStorage = &#123;</div><div class="line">  fetch: function () &#123;</div><div class="line">    var todos = JSON.parse(localStorage.getItem(STORAGE_KEY) || &apos;[]&apos;)</div><div class="line">    todos.forEach(function (todo, index) &#123;</div><div class="line">      todo.id = index</div><div class="line">    &#125;)</div><div class="line">    todoStorage.uid = todos.length</div><div class="line">    return todos</div><div class="line">  &#125;,</div><div class="line">  save: function (todos) &#123;</div><div class="line">    localStorage.setItem(STORAGE_KEY, JSON.stringify(todos))</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>还有我们data里的items：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">data: &#123;</div><div class="line">  	items:todoStorage.fetch(),//直接从localstroage拿数据</div><div class="line">  	inputVaule:&quot;&quot;</div><div class="line">  &#125;,</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="后言："><a href="#后言：" class="headerlink" title="后言："></a>后言：</h2><p>到这里功能就齐全了，小伙伴可以再添加更多的功能，比如全部删除等，</p>
+<p>##源码:<br><a href="https://github.com/gdmec07140603/todolist.git" target="_blank" rel="external">https://github.com/gdmec07140603/todolist.git</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/17/js继承的四种方式/" rel="next" title="javascript的四种继承方式">
+                <i class="fa fa-chevron-left"></i> javascript的四种继承方式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/06/git上传代码到github/" rel="prev" title="git上传代码到github">
+                git上传代码到github <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/head.jpg"
+               alt="John Doe" />
+          <p class="site-author-name" itemprop="name">John Doe</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">Artikel</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/sinat_34498624" target="_blank" title="CSDN">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  CSDN
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/gdmec07140603" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言："><span class="nav-number">1.</span> <span class="nav-text">前言：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#刚学习vue的小伙伴不知道从哪入手，很多网上的教程一来就搭建脚手架环境，可以新手更本看不懂，建议还是用引入script的方式引入vue-js，然后看官网的教程，再拿那这个demo练练手，也可以看看官网的demo，然后再-去熟悉安装，搭建单页面应用。"><span class="nav-number">2.</span> <span class="nav-text">刚学习vue的小伙伴不知道从哪入手，很多网上的教程一来就搭建脚手架环境，可以新手更本看不懂，建议还是用引入script的方式引入vue.js，然后看官网的教程，再拿那这个demo练练手，也可以看看官网的demo，然后再 去熟悉安装，搭建单页面应用。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#效果："><span class="nav-number">3.</span> <span class="nav-text">效果：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#功能："><span class="nav-number">4.</span> <span class="nav-text">功能：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用到的vue函数："><span class="nav-number">5.</span> <span class="nav-text">用到的vue函数：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-页面："><span class="nav-number">5.1.</span> <span class="nav-text">1.页面：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-添加ul和button："><span class="nav-number">5.2.</span> <span class="nav-text">2.添加ul和button：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-在li加上checkbox和delete"><span class="nav-number">5.3.</span> <span class="nav-text">3. 在li加上checkbox和delete</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#localstorage："><span class="nav-number">6.</span> <span class="nav-text">localstorage：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加li时保存数据到localstorage"><span class="nav-number">6.1.</span> <span class="nav-text">添加li时保存数据到localstorage:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器调试："><span class="nav-number">6.2.</span> <span class="nav-text">浏览器调试：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加fetch方法"><span class="nav-number">6.3.</span> <span class="nav-text">添加fetch方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后言："><span class="nav-number">7.</span> <span class="nav-text">后言：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("p0m9RtlAwcOzwOxvFUmJ8mJa-gzGzoHsz", "iSAECyJdDwyUjot8rqor24l5");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

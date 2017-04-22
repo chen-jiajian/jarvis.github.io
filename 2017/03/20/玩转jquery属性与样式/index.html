@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="引言：javascript中有个很重要的概念，就是变量的作用域，js的变量无非两种-全局变量和局部变量，局部变量在函数内定义，函数外面是访问不到的，但是有时候我们要访问函数内部的变量，怎么办呢？ 我们稍微变通一下，于是就有了闭包的概念；  闭包概念：由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包理解成“定义在一个函数内部的函数”。简单理解就是在一个函数内定义">
+<meta name="description" content="引言：jquery是一个js的框架，功能非常丰富，对于前端开发工程师来说不可能陌生，jquery封装了各种选择器，样式操作，Dom操作，各种事件和动画，功能非常强大，而且对于主流浏览器都兼容，我们来看看jquery中的属性与样式操作  参考：慕课网  attr():attr(传入属性名)：获取属性的值（常用用法，举个例子）123456&amp;lt;input type=&amp;quot;text&amp;quot;">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js闭包解析">
-<meta property="og:url" content="http://yoursite.com/2017/04/23/hello-world/index.html">
+<meta property="og:title" content="玩转jquery属性与样式">
+<meta property="og:url" content="http://yoursite.com/2017/03/20/玩转jquery属性与样式/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="引言：javascript中有个很重要的概念，就是变量的作用域，js的变量无非两种-全局变量和局部变量，局部变量在函数内定义，函数外面是访问不到的，但是有时候我们要访问函数内部的变量，怎么办呢？ 我们稍微变通一下，于是就有了闭包的概念；  闭包概念：由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包理解成“定义在一个函数内部的函数”。简单理解就是在一个函数内定义">
-<meta property="og:updated_time" content="2017-04-17T02:30:47.954Z">
+<meta property="og:description" content="引言：jquery是一个js的框架，功能非常丰富，对于前端开发工程师来说不可能陌生，jquery封装了各种选择器，样式操作，Dom操作，各种事件和动画，功能非常强大，而且对于主流浏览器都兼容，我们来看看jquery中的属性与样式操作  参考：慕课网  attr():attr(传入属性名)：获取属性的值（常用用法，举个例子）123456&amp;lt;input type=&amp;quot;text&amp;quot;">
+<meta property="og:updated_time" content="2017-04-17T02:30:47.956Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js闭包解析">
-<meta name="twitter:description" content="引言：javascript中有个很重要的概念，就是变量的作用域，js的变量无非两种-全局变量和局部变量，局部变量在函数内定义，函数外面是访问不到的，但是有时候我们要访问函数内部的变量，怎么办呢？ 我们稍微变通一下，于是就有了闭包的概念；  闭包概念：由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包理解成“定义在一个函数内部的函数”。简单理解就是在一个函数内定义">
+<meta name="twitter:title" content="玩转jquery属性与样式">
+<meta name="twitter:description" content="引言：jquery是一个js的框架，功能非常丰富，对于前端开发工程师来说不可能陌生，jquery封装了各种选择器，样式操作，Dom操作，各种事件和动画，功能非常强大，而且对于主流浏览器都兼容，我们来看看jquery中的属性与样式操作  参考：慕课网  attr():attr(传入属性名)：获取属性的值（常用用法，举个例子）123456&amp;lt;input type=&amp;quot;text&amp;quot;">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/23/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/20/玩转jquery属性与样式/"/>
 
 
 
 
 
-  <title> js闭包解析 | Hexo </title>
+  <title> 玩转jquery属性与样式 | Hexo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -270,7 +270,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/20/玩转jquery属性与样式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -291,7 +291,7 @@
             
             
               
-                js闭包解析
+                玩转jquery属性与样式
               
             
           </h1>
@@ -306,8 +306,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-23T00:17:46+08:00">
-                2017-04-23
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-20T10:51:42+08:00">
+                2017-03-20
               </time>
             
 
@@ -324,7 +324,7 @@
 
           
           
-             <span id="/2017/04/23/hello-world/" class="leancloud_visitors" data-flag-title="js闭包解析">
+             <span id="/2017/03/20/玩转jquery属性与样式/" class="leancloud_visitors" data-flag-title="玩转jquery属性与样式">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -353,25 +353,37 @@
       
 
       
-        <h2 id="引言："><a href="#引言：" class="headerlink" title="引言："></a>引言：</h2><p>javascript中有个很重要的概念，就是变量的作用域，js的变量无非两种-全局变量和局部变量，局部变量在函数内定义，函数外面是访问不到的，但是有时候我们要访问函数内部的变量，怎么办呢？ 我们稍微变通一下，于是就有了闭包的概念；</p>
+        <h2 id="引言："><a href="#引言：" class="headerlink" title="引言："></a>引言：</h2><p><strong>jquery是一个js的框架，功能非常丰富，对于前端开发工程师来说不可能陌生，jquery封装了各种选择器，样式操作，Dom操作，各种事件和动画，功能非常强大，而且对于主流浏览器都兼容，我们来看看jquery中的属性与样式操作</strong></p>
 <hr>
-<h2 id="闭包概念："><a href="#闭包概念：" class="headerlink" title="闭包概念："></a>闭包概念：</h2><p>由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包理解成“定义在一个函数内部的函数”。简单理解就是在一个函数内定义了一个函数fn，然后在函数外去调用它，就产生了闭包；</p>
+<p>参考：慕课网</p>
 <hr>
-<h2 id="闭包的作用："><a href="#闭包的作用：" class="headerlink" title="闭包的作用："></a>闭包的作用：</h2><h2 id="在函数外面能访问函数内定义的局部变量；另一个就是让这些变量的值始终保持在内存中。"><a href="#在函数外面能访问函数内定义的局部变量；另一个就是让这些变量的值始终保持在内存中。" class="headerlink" title=" 在函数外面能访问函数内定义的局部变量；另一个就是让这些变量的值始终保持在内存中。 "></a> 在函数外面能访问函数内定义的局部变量；另一个就是让这些变量的值始终保持在内存中。 </h2><p> 这种情况下，我们是不能访问到局部变量的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function f1()&#123;</div><div class="line">　　var n=999;</div><div class="line">&#125;</div><div class="line"></div><div class="line">alert(n); // error</div></pre></td></tr></table></figure>
-<p> 如果我们要访问n就要使用闭包：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">function f1()&#123;</div><div class="line">	var n=999;</div><div class="line">	function f2()&#123;</div><div class="line">		alert(n);</div><div class="line">	&#125;</div><div class="line">	return f2;</div><div class="line">&#125;</div><div class="line">var f3=f1();</div><div class="line">f3();//999</div></pre></td></tr></table></figure>
-<p> 此时n的值是被保存在内存中，就是因为这点，闭包也是有缺点的，如果频繁使用闭包，就容易占用内存，解决的方法是退出函数之前，将不使用的局部变量全部删除。</p>
+<h2 id="attr"><a href="#attr" class="headerlink" title="attr():"></a>attr():</h2><p>attr(传入属性名)：获取属性的值（常用用法，举个例子）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;text&quot; value=&quot;helloworld&quot; /&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">$(&quot;.hello&quot;).attr(&apos;value&apos;)//获取类名为hello的元素（jquery的选择器）的value属性的值，结果为helloworld</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>attr(属性名, 属性值)：设置属性的值（常用用法，例子）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;text&quot; value=&quot;helloworld&quot; /&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">$(&quot;.hello&quot;).attr(&apos;value&apos;,&apos;i am a boy&apos;)//结果 修改value属性的值为i am a boy</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>attr(属性名,函数值)：设置属性的函数值<br>attr(attributes)：给指定元素设置多个属性值，即：{属性名一: “属性值一” , 属性名二: “属性值二” , … … }</p>
+<p><strong>attr其实是设置属性，讲一个bug，如果你是动态设置value，有时候获取的是默认的value，而不是你输入的值，动态获取或设置最好还是用下面的一个操作函数val()</strong></p>
 <hr>
-<p> 如果函数内外定义了同一个变量会有冲突吗？</p>
-<h3 id="看一个面试常用的题目："><a href="#看一个面试常用的题目：" class="headerlink" title="看一个面试常用的题目："></a>看一个面试常用的题目：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var a=1;</div><div class="line">function f1()&#123;</div><div class="line"> var a =2;</div><div class="line"> alert(a);  </div><div class="line">&#125;		</div><div class="line">f1();</div><div class="line">alert(a);//结果是2，1</div></pre></td></tr></table></figure>
-<p> 这是因为a使用了var关键字，维护a的作用域在函数内部，而不受外部定义的影响</p>
-<p> 再来看：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function f1()</div><div class="line">&#123;</div><div class="line">  a =2;</div><div class="line"> alert(a);  </div><div class="line">&#125;	</div><div class="line">var a=1;	</div><div class="line">f1();</div><div class="line">alert(a);//结果是2,2</div></pre></td></tr></table></figure>
-<p> 真是奇怪，两次都是2，在这里f1的a没有使用var，所以是全局变量，在外面定义了a=1后执行函数f1，a又被赋值为2，所以两次都alert 2；</p>
+<h2 id="val-："><a href="#val-：" class="headerlink" title="val()："></a>val()：</h2><p>val()获取元素的值<br>val(“va”)设置元素的值<br>val( function ) ，一个用来返回设置值的函数</p>
+<h2 id="html-："><a href="#html-：" class="headerlink" title="html()："></a>html()：</h2><p>html()是用来获取元素的html内容，包括html标签</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;left first-div&quot;&gt;</div><div class="line">       &lt;div class=&quot;div&quot;&gt;</div><div class="line">           &lt;a&gt;:first-child&lt;/a&gt;</div><div class="line">           &lt;a&gt;第二个元素&lt;/a&gt;</div><div class="line">           &lt;a&gt;:last-child&lt;/a&gt;</div><div class="line">       &lt;/div&gt;  </div><div class="line">       &lt;div class=&quot;div&quot;&gt;</div><div class="line">           &lt;a&gt;:first-child&lt;/a&gt;</div><div class="line">           &lt;a&gt;第二个元素&lt;/a&gt;</div><div class="line">           &lt;a&gt;:last-child&lt;/a&gt;</div><div class="line">       &lt;/div&gt;</div><div class="line">   &lt;/div&gt;</div><div class="line"></div><div class="line">$(&quot;.first-div&quot;).html()</div><div class="line">&lt;!--结果 </div><div class="line">&lt;div class=&quot;div&quot;&gt; &lt;a&gt;:first-child&lt;/a&gt; &lt;a&gt;第二个元素&lt;/a&gt; &lt;a&gt;:last-child&lt;/a&gt; &lt;/div&gt; &lt;div class=&quot;div&quot;&gt; &lt;a&gt;:first-child&lt;/a&gt; &lt;a&gt;第二个元素&lt;/a&gt; &lt;a&gt;:last-child&lt;/a&gt; &lt;/div&gt; </div><div class="line">--&gt;</div></pre></td></tr></table></figure>
+<p>html( htmlString )  设置元素的html内容<br>html( function(index, oldhtml) ) 用来返回设置HTML内容的一个函数</p>
+<h2 id="text"><a href="#text" class="headerlink" title="text():"></a>text():</h2><pre><code>text()是比较常用的一个函数，用于得到匹配元素集合中每个元素的合并文本，包括他们的后代，返回值是字符串，比如下面一个例子
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">   &lt;div class=&quot;left first-div&quot;&gt;</div><div class="line">       &lt;div class=&quot;div&quot;&gt;</div><div class="line">           &lt;a&gt;:first-child&lt;/a&gt;</div><div class="line">           &lt;a&gt;第二个元素&lt;/a&gt;</div><div class="line">           &lt;a&gt;:last-child&lt;/a&gt;</div><div class="line">       &lt;/div&gt;  </div><div class="line">       &lt;div class=&quot;div&quot;&gt;</div><div class="line">           &lt;a&gt;:first-child&lt;/a&gt;</div><div class="line">           &lt;a&gt;第二个元素&lt;/a&gt;</div><div class="line">           &lt;a&gt;:last-child&lt;/a&gt;</div><div class="line">       &lt;/div&gt;</div><div class="line">   &lt;/div&gt;</div><div class="line"></div><div class="line">$(&quot;.first-div&quot;).text()</div><div class="line">&lt;-- 结果</div><div class="line">:first-child 第二个元素 :last-child :first-child 第二个元素 :last-child </div><div class="line">--&gt;</div></pre></td></tr></table></figure>
+<pre><code>text( textString ) 用于设置匹配元素内容的文本
+</code></pre><hr>
+<h2 id="css（）"><a href="#css（）" class="headerlink" title="css（）:"></a>css（）:</h2><p>这个方法很好用，可以获取元素的样式属性值，也可以设置</p>
+<h4 id="获取："><a href="#获取：" class="headerlink" title="获取："></a><strong>获取：</strong></h4><pre><code>element.css(property)//获取property属性的值，如果property是数组，则返回一个对象结果
+</code></pre><h4 id="设置："><a href="#设置：" class="headerlink" title="设置："></a><strong>设置：</strong></h4><pre><code>element.css(property,value)//设置property属性的值，也可将value换成函数，最厉害的是可以传一个对象，设置多个样式。
+</code></pre><p>多个样式设置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(&apos;#abc&apos;).css(&#123;</div><div class="line">    fontSize : &apos;12px&apos;,</div><div class="line">    webkitBorderRadius : &apos;5px&apos;,</div><div class="line">    color : &apos;#c00&apos;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h4 id="补充："><a href="#补充：" class="headerlink" title="补充："></a><strong>补充：</strong></h4><p>css（）设置方法是内联样式，样式是有优先性的，外部文件的css叫外部样式，内部定义好，等需要时才设置内部样式，直接通过style属性设置的是<strong>内联样式，css就是属于内联样式，优先级是内联&gt;内部&gt;外部</strong></p>
 <hr>
-<p>这里只对闭包概念做简单描述，和举几个简单的例子帮助理解闭包，其实闭包在实际项目中的运用要复杂得多，如果有更好的见解，欢迎讨论！</p>
-<p>还有一个比较难一点的例子<a href="https://www.nowcoder.com/practice/578026cd24e3446bbf27fe565473dc26?tpId=6&amp;tqId=10972&amp;tPage=2&amp;rp=2&amp;ru=/ta/js-assessment&amp;qru=/ta/js-assessment/question-ranking可以去看看，直接在上面编程" target="_blank" rel="external">https://www.nowcoder.com/practice/578026cd24e3446bbf27fe565473dc26?tpId=6&amp;tqId=10972&amp;tPage=2&amp;rp=2&amp;ru=/ta/js-assessment&amp;qru=/ta/js-assessment/question-ranking可以去看看，直接在上面编程</a> 求助那里有答案o</p>
+<h2 id="toggleClass和addClass，removeClass"><a href="#toggleClass和addClass，removeClass" class="headerlink" title="toggleClass和addClass，removeClass"></a>toggleClass和addClass，removeClass</h2><pre><code>为元素添加class的方式改变样式，属于外联样式和内部样式（如果是外部文件定义的就是外部样式）
+</code></pre><h4 id="addClass-className"><a href="#addClass-className" class="headerlink" title="addClass( className ) : "></a><strong>addClass( className ) : </strong></h4><pre><code>为每个匹配元素所要增加的一个或多个样式名
+</code></pre><h4 id="removeClass-className-："><a href="#removeClass-className-：" class="headerlink" title="removeClass( className )："></a><strong>removeClass( className )：</strong></h4><pre><code>每个匹配元素移除的一个或多个用空格隔开的样式名，如果没有样式名，所有样式将被移除
+</code></pre><h4 id="toggleClass-className-，false-："><a href="#toggleClass-className-，false-：" class="headerlink" title="toggleClass( className ，false)："></a><strong>toggleClass( className ，false)：</strong></h4><pre><code>给元素切换的一个或多个（用空格隔开）样式类名，false是判断样式是否被添加或移除，可不加， toggleClass是一个互斥的逻辑，也就是通过判断对应的元素上是否存在指定的Class名，如果有就删除，如果没有就增加。toggleClass会保留原有的Class名后新增，通过空格隔开
+</code></pre><hr>
+<p><strong>就差不多到这了，有人看再更多个html5的dataset</strong></p>
 
       
     </div>
@@ -408,14 +420,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/04/02/Web下mvc模式的理解/" rel="next" title="Web下mvc模式的理解">
+                <i class="fa fa-chevron-left"></i> Web下mvc模式的理解
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/17/js继承的四种方式/" rel="prev" title="javascript的四种继承方式">
-                javascript的四种继承方式 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/17/js运动框架/" rel="prev" title="js运动框架">
+                js运动框架 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -547,7 +563,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言："><span class="nav-number">1.</span> <span class="nav-text">引言：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#闭包概念："><span class="nav-number">2.</span> <span class="nav-text">闭包概念：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#闭包的作用："><span class="nav-number">3.</span> <span class="nav-text">闭包的作用：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在函数外面能访问函数内定义的局部变量；另一个就是让这些变量的值始终保持在内存中。"><span class="nav-number">4.</span> <span class="nav-text"> 在函数外面能访问函数内定义的局部变量；另一个就是让这些变量的值始终保持在内存中。 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#看一个面试常用的题目："><span class="nav-number">4.1.</span> <span class="nav-text">看一个面试常用的题目：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言："><span class="nav-number">1.</span> <span class="nav-text">引言：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#attr"><span class="nav-number">2.</span> <span class="nav-text">attr():</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#val-："><span class="nav-number">3.</span> <span class="nav-text">val()：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#html-："><span class="nav-number">4.</span> <span class="nav-text">html()：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#text"><span class="nav-number">5.</span> <span class="nav-text">text():</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#css（）"><span class="nav-number">6.</span> <span class="nav-text">css（）:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#获取："><span class="nav-number">6.0.1.</span> <span class="nav-text">获取：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置："><span class="nav-number">6.0.2.</span> <span class="nav-text">设置：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#补充："><span class="nav-number">6.0.3.</span> <span class="nav-text">补充：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toggleClass和addClass，removeClass"><span class="nav-number">7.</span> <span class="nav-text">toggleClass和addClass，removeClass</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#addClass-className"><span class="nav-number">7.0.1.</span> <span class="nav-text">addClass( className ) : </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#removeClass-className-："><span class="nav-number">7.0.2.</span> <span class="nav-text">removeClass( className )：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#toggleClass-className-，false-："><span class="nav-number">7.0.3.</span> <span class="nav-text">toggleClass( className ，false)：</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

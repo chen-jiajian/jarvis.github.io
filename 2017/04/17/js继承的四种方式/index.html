@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="引言：javascript中有个很重要的概念，就是变量的作用域，js的变量无非两种-全局变量和局部变量，局部变量在函数内定义，函数外面是访问不到的，但是有时候我们要访问函数内部的变量，怎么办呢？ 我们稍微变通一下，于是就有了闭包的概念；  闭包概念：由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包理解成“定义在一个函数内部的函数”。简单理解就是在一个函数内定义">
+<meta name="description" content="javascript的四种继承方式父类：既然是介绍继承，那我们先定义一个父类 // 父类：动物类 function Animal (name) {   // 属性   this.name = name || &amp;apos;Animal&amp;apos;;   // 实例方法   this.sleep = function(){     console.log(this.name + &amp;apos;正在睡觉！">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js闭包解析">
-<meta property="og:url" content="http://yoursite.com/2017/04/23/hello-world/index.html">
+<meta property="og:title" content="javascript的四种继承方式">
+<meta property="og:url" content="http://yoursite.com/2017/04/17/js继承的四种方式/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="引言：javascript中有个很重要的概念，就是变量的作用域，js的变量无非两种-全局变量和局部变量，局部变量在函数内定义，函数外面是访问不到的，但是有时候我们要访问函数内部的变量，怎么办呢？ 我们稍微变通一下，于是就有了闭包的概念；  闭包概念：由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包理解成“定义在一个函数内部的函数”。简单理解就是在一个函数内定义">
-<meta property="og:updated_time" content="2017-04-17T02:30:47.954Z">
+<meta property="og:description" content="javascript的四种继承方式父类：既然是介绍继承，那我们先定义一个父类 // 父类：动物类 function Animal (name) {   // 属性   this.name = name || &amp;apos;Animal&amp;apos;;   // 实例方法   this.sleep = function(){     console.log(this.name + &amp;apos;正在睡觉！">
+<meta property="og:updated_time" content="2017-04-18T13:36:17.297Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js闭包解析">
-<meta name="twitter:description" content="引言：javascript中有个很重要的概念，就是变量的作用域，js的变量无非两种-全局变量和局部变量，局部变量在函数内定义，函数外面是访问不到的，但是有时候我们要访问函数内部的变量，怎么办呢？ 我们稍微变通一下，于是就有了闭包的概念；  闭包概念：由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包理解成“定义在一个函数内部的函数”。简单理解就是在一个函数内定义">
+<meta name="twitter:title" content="javascript的四种继承方式">
+<meta name="twitter:description" content="javascript的四种继承方式父类：既然是介绍继承，那我们先定义一个父类 // 父类：动物类 function Animal (name) {   // 属性   this.name = name || &amp;apos;Animal&amp;apos;;   // 实例方法   this.sleep = function(){     console.log(this.name + &amp;apos;正在睡觉！">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/23/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/17/js继承的四种方式/"/>
 
 
 
 
 
-  <title> js闭包解析 | Hexo </title>
+  <title> javascript的四种继承方式 | Hexo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -270,7 +270,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/23/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/17/js继承的四种方式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -291,7 +291,7 @@
             
             
               
-                js闭包解析
+                javascript的四种继承方式
               
             
           </h1>
@@ -306,8 +306,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-23T00:17:46+08:00">
-                2017-04-23
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-17T10:21:22+08:00">
+                2017-04-17
               </time>
             
 
@@ -324,7 +324,7 @@
 
           
           
-             <span id="/2017/04/23/hello-world/" class="leancloud_visitors" data-flag-title="js闭包解析">
+             <span id="/2017/04/17/js继承的四种方式/" class="leancloud_visitors" data-flag-title="javascript的四种继承方式">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -353,25 +353,95 @@
       
 
       
-        <h2 id="引言："><a href="#引言：" class="headerlink" title="引言："></a>引言：</h2><p>javascript中有个很重要的概念，就是变量的作用域，js的变量无非两种-全局变量和局部变量，局部变量在函数内定义，函数外面是访问不到的，但是有时候我们要访问函数内部的变量，怎么办呢？ 我们稍微变通一下，于是就有了闭包的概念；</p>
-<hr>
-<h2 id="闭包概念："><a href="#闭包概念：" class="headerlink" title="闭包概念："></a>闭包概念：</h2><p>由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包理解成“定义在一个函数内部的函数”。简单理解就是在一个函数内定义了一个函数fn，然后在函数外去调用它，就产生了闭包；</p>
-<hr>
-<h2 id="闭包的作用："><a href="#闭包的作用：" class="headerlink" title="闭包的作用："></a>闭包的作用：</h2><h2 id="在函数外面能访问函数内定义的局部变量；另一个就是让这些变量的值始终保持在内存中。"><a href="#在函数外面能访问函数内定义的局部变量；另一个就是让这些变量的值始终保持在内存中。" class="headerlink" title=" 在函数外面能访问函数内定义的局部变量；另一个就是让这些变量的值始终保持在内存中。 "></a> 在函数外面能访问函数内定义的局部变量；另一个就是让这些变量的值始终保持在内存中。 </h2><p> 这种情况下，我们是不能访问到局部变量的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function f1()&#123;</div><div class="line">　　var n=999;</div><div class="line">&#125;</div><div class="line"></div><div class="line">alert(n); // error</div></pre></td></tr></table></figure>
-<p> 如果我们要访问n就要使用闭包：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">function f1()&#123;</div><div class="line">	var n=999;</div><div class="line">	function f2()&#123;</div><div class="line">		alert(n);</div><div class="line">	&#125;</div><div class="line">	return f2;</div><div class="line">&#125;</div><div class="line">var f3=f1();</div><div class="line">f3();//999</div></pre></td></tr></table></figure>
-<p> 此时n的值是被保存在内存中，就是因为这点，闭包也是有缺点的，如果频繁使用闭包，就容易占用内存，解决的方法是退出函数之前，将不使用的局部变量全部删除。</p>
-<hr>
-<p> 如果函数内外定义了同一个变量会有冲突吗？</p>
-<h3 id="看一个面试常用的题目："><a href="#看一个面试常用的题目：" class="headerlink" title="看一个面试常用的题目："></a>看一个面试常用的题目：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var a=1;</div><div class="line">function f1()&#123;</div><div class="line"> var a =2;</div><div class="line"> alert(a);  </div><div class="line">&#125;		</div><div class="line">f1();</div><div class="line">alert(a);//结果是2，1</div></pre></td></tr></table></figure>
-<p> 这是因为a使用了var关键字，维护a的作用域在函数内部，而不受外部定义的影响</p>
-<p> 再来看：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function f1()</div><div class="line">&#123;</div><div class="line">  a =2;</div><div class="line"> alert(a);  </div><div class="line">&#125;	</div><div class="line">var a=1;	</div><div class="line">f1();</div><div class="line">alert(a);//结果是2,2</div></pre></td></tr></table></figure>
-<p> 真是奇怪，两次都是2，在这里f1的a没有使用var，所以是全局变量，在外面定义了a=1后执行函数f1，a又被赋值为2，所以两次都alert 2；</p>
-<hr>
-<p>这里只对闭包概念做简单描述，和举几个简单的例子帮助理解闭包，其实闭包在实际项目中的运用要复杂得多，如果有更好的见解，欢迎讨论！</p>
-<p>还有一个比较难一点的例子<a href="https://www.nowcoder.com/practice/578026cd24e3446bbf27fe565473dc26?tpId=6&amp;tqId=10972&amp;tPage=2&amp;rp=2&amp;ru=/ta/js-assessment&amp;qru=/ta/js-assessment/question-ranking可以去看看，直接在上面编程" target="_blank" rel="external">https://www.nowcoder.com/practice/578026cd24e3446bbf27fe565473dc26?tpId=6&amp;tqId=10972&amp;tPage=2&amp;rp=2&amp;ru=/ta/js-assessment&amp;qru=/ta/js-assessment/question-ranking可以去看看，直接在上面编程</a> 求助那里有答案o</p>
+        <h2 id="javascript的四种继承方式"><a href="#javascript的四种继承方式" class="headerlink" title="javascript的四种继承方式"></a>javascript的四种继承方式</h2><h3 id="父类："><a href="#父类：" class="headerlink" title="父类："></a>父类：</h3><p>既然是介绍继承，那我们先定义一个父类</p>
+<pre><code>// 父类：动物类
+function Animal (name) {
+  // 属性
+  this.name = name || &apos;Animal&apos;;
+  // 实例方法
+  this.sleep = function(){
+    console.log(this.name + &apos;正在睡觉！&apos;);
+  }
+}
+// 原型方法
+Animal.prototype.eat = function(food) {
+  console.log(this.name + &apos;正在吃：&apos; + food);
+};
+</code></pre><h3 id="1-原型链继承"><a href="#1-原型链继承" class="headerlink" title="1. 原型链继承"></a>1. 原型链继承</h3><h4 id="原型链概念：每个对象都会在其内部初始化一个属性，就是prototype-原型-，当我们访问一个对象的属性时，如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype，于是就这样一直找下去，也就是我们平时所说的原型链的概念。"><a href="#原型链概念：每个对象都会在其内部初始化一个属性，就是prototype-原型-，当我们访问一个对象的属性时，如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype，于是就这样一直找下去，也就是我们平时所说的原型链的概念。" class="headerlink" title="原型链概念：每个对象都会在其内部初始化一个属性，就是prototype(原型)，当我们访问一个对象的属性时，如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype，于是就这样一直找下去，也就是我们平时所说的原型链的概念。"></a>原型链概念：每个对象都会在其内部初始化一个属性，就是prototype(原型)，当我们访问一个对象的属性时，如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype，于是就这样一直找下去，也就是我们平时所说的原型链的概念。</h4><h4 id="实例："><a href="#实例：" class="headerlink" title="实例："></a>实例：</h4><pre><code>function Cat(){}
+Cat.prototype = new Animal();//继承父类的原型
+Cat.prototype.name = &apos;cat&apos;;    //添加子类原型属性
+var cat = new Cat();
+
+console.log(cat.name);//cat
+cat.eat(&apos;fish&apos;);//cat正在吃fish
+cat.sleep();//cat正在睡觉
+
+//cat即是Animal的实例也是Cat的实例
+console.log(cat instanceof Animal); //true 
+console.log(cat instanceof Cat); //true
+</code></pre><h4 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h4><ol>
+<li>实例是子类Cat的实例，也是父类Animal的实例</li>
+<li>父类新增原型方法/原型属性，子类都能访问到</li>
+</ol>
+<h4 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h4><ol>
+<li>要想为子类新增属性和方法，必须要在继承(new Animal()这样的语句)之后执行，不能放到构造器中</li>
+<li>无法实现多继承</li>
+</ol>
+<h3 id="2-构造继承"><a href="#2-构造继承" class="headerlink" title="2. 构造继承"></a>2. 构造继承</h3><h4 id="实例：-1"><a href="#实例：-1" class="headerlink" title="实例："></a>实例：</h4><pre><code>function Cat(name){
+  //call的用法就是执行Animal构造函数，对象指向this，也就是Cat的this,也可以理解为Cat继承了Animal
+  Animal.call(this);
+  this.name = name || &apos;Tom&apos;;
+}
+
+var cat = new Cat();
+console.log(cat.name);//Tom
+cat.sleep();//Tom正在睡觉
+console.log(cat instanceof Animal); // false
+console.log(cat instanceof Cat); // true
+</code></pre><h4 id="特点：-1"><a href="#特点：-1" class="headerlink" title="特点："></a>特点：</h4><ol>
+<li>子类实例不再是父类的实例 不再共享引用属性</li>
+<li>创建子类实例，可以向父类传递参数</li>
+<li>可以实现多继承（call多个父类对象）//具体实现不清楚</li>
+</ol>
+<h4 id="缺点：-1"><a href="#缺点：-1" class="headerlink" title="缺点："></a>缺点：</h4><ol>
+<li>实例不是父类的实例，这有时也是一个缺点；</li>
+<li>只能继承父类的实例属性和方法，不能继承原型属性/方法（构造继承与原型无关）；</li>
+</ol>
+<h3 id="3-实例继承"><a href="#3-实例继承" class="headerlink" title="3. 实例继承"></a>3. 实例继承</h3><h4 id="实例：-2"><a href="#实例：-2" class="headerlink" title="实例："></a>实例：</h4><pre><code>function Cat(name){
+  var instance = new Animal();//定义父类的实例
+  instance.name = name || &apos;Tom&apos;;//定义实例的属性为子类的属性
+  return instance;//返回实例
+}
+
+var cat = new Cat();
+console.log(cat.name);//Tom
+cat.sleep();//Tom正在睡觉
+console.log(cat instanceof Animal); // true
+console.log(cat instanceof Cat); // false
+</code></pre><h4 id="特点：-2"><a href="#特点：-2" class="headerlink" title="特点："></a>特点：</h4><ol>
+<li>容易理解，实例是父类的，换上子类的属性，返回出来</li>
+</ol>
+<h4 id="缺点：-2"><a href="#缺点：-2" class="headerlink" title="缺点："></a>缺点：</h4><ol>
+<li>实例是父类的实例，不是子类的实例</li>
+<li>不支持多继承</li>
+</ol>
+<h3 id="4-拷贝继承"><a href="#4-拷贝继承" class="headerlink" title="4. 拷贝继承"></a>4. 拷贝继承</h3><h4 id="实例：-3"><a href="#实例：-3" class="headerlink" title="实例："></a>实例：</h4><pre><code>function Cat(name){
+  var animal = new Animal();
+  for(var p in animal){
+    Cat.prototype[p] = animal[p];
+  }
+  Cat.prototype.name = name || &apos;Tom&apos;;
+}
+
+var cat = new Cat();
+console.log(cat.name);
+cat.sleep();
+console.log(cat instanceof Animal); // false
+console.log(cat instanceof Cat); // true
+</code></pre><h4 id="特点：-3"><a href="#特点：-3" class="headerlink" title="特点："></a>特点：</h4><ol>
+<li>支持多继承<h4 id="缺点：-3"><a href="#缺点：-3" class="headerlink" title="缺点："></a>缺点：</h4></li>
+<li>效率较低，内存占用高（因为要拷贝父类的属性）</li>
+</ol>
 
       
     </div>
@@ -408,14 +478,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/04/23/hello-world/" rel="next" title="js闭包解析">
+                <i class="fa fa-chevron-left"></i> js闭包解析
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/17/js继承的四种方式/" rel="prev" title="javascript的四种继承方式">
-                javascript的四种继承方式 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/12/vue实现todolist的demo/" rel="prev" title="vue实现todolist的demo">
+                vue实现todolist的demo <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -547,7 +621,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言："><span class="nav-number">1.</span> <span class="nav-text">引言：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#闭包概念："><span class="nav-number">2.</span> <span class="nav-text">闭包概念：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#闭包的作用："><span class="nav-number">3.</span> <span class="nav-text">闭包的作用：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在函数外面能访问函数内定义的局部变量；另一个就是让这些变量的值始终保持在内存中。"><span class="nav-number">4.</span> <span class="nav-text"> 在函数外面能访问函数内定义的局部变量；另一个就是让这些变量的值始终保持在内存中。 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#看一个面试常用的题目："><span class="nav-number">4.1.</span> <span class="nav-text">看一个面试常用的题目：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript的四种继承方式"><span class="nav-number">1.</span> <span class="nav-text">javascript的四种继承方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#父类："><span class="nav-number">1.1.</span> <span class="nav-text">父类：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-原型链继承"><span class="nav-number">1.2.</span> <span class="nav-text">1. 原型链继承</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原型链概念：每个对象都会在其内部初始化一个属性，就是prototype-原型-，当我们访问一个对象的属性时，如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype，于是就这样一直找下去，也就是我们平时所说的原型链的概念。"><span class="nav-number">1.2.1.</span> <span class="nav-text">原型链概念：每个对象都会在其内部初始化一个属性，就是prototype(原型)，当我们访问一个对象的属性时，如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype，于是就这样一直找下去，也就是我们平时所说的原型链的概念。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例："><span class="nav-number">1.2.2.</span> <span class="nav-text">实例：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特点："><span class="nav-number">1.2.3.</span> <span class="nav-text">特点：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#缺点："><span class="nav-number">1.2.4.</span> <span class="nav-text">缺点：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-构造继承"><span class="nav-number">1.3.</span> <span class="nav-text">2. 构造继承</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#实例：-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">实例：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特点：-1"><span class="nav-number">1.3.2.</span> <span class="nav-text">特点：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#缺点：-1"><span class="nav-number">1.3.3.</span> <span class="nav-text">缺点：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-实例继承"><span class="nav-number">1.4.</span> <span class="nav-text">3. 实例继承</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#实例：-2"><span class="nav-number">1.4.1.</span> <span class="nav-text">实例：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特点：-2"><span class="nav-number">1.4.2.</span> <span class="nav-text">特点：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#缺点：-2"><span class="nav-number">1.4.3.</span> <span class="nav-text">缺点：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-拷贝继承"><span class="nav-number">1.5.</span> <span class="nav-text">4. 拷贝继承</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#实例：-3"><span class="nav-number">1.5.1.</span> <span class="nav-text">实例：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特点：-3"><span class="nav-number">1.5.2.</span> <span class="nav-text">特点：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#缺点：-3"><span class="nav-number">1.5.3.</span> <span class="nav-text">缺点：</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
